@@ -1,0 +1,19 @@
+{
+    "main": {
+        "title": "Welcome, CR Dashboard!",
+        "subtitle": "This is your homepage",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "If you have any question on CR Dashboard:",
+        "link": {
+            "homepage": "Zensar homepage",
+            "stackoverflow": "JCrdash on Stack Overflow",
+            "bugtracker": "JCrdash bug tracker",
+            "chat": "JCrdash public chat room",
+            "contact": "contact @devteam on Twitter"
+        },
+        "like": "If you like JCRDashboard, don't forget to give us a star on",
+        "github": "Github"
+    }
+}

@@ -1,0 +1,197 @@
+<div>
+
+    <h2 translate="jcrdashApp.crdetail.home.title">Crdetails</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveCrdetailModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="jcrdashApp.crdetail.home.createLabel">Create a new Crdetail</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a Crdetail</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveCrdetailModal" tabindex="-1" role="dialog" aria-labelledby="myCrdetailLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="save()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myCrdetailLabel" translate="jcrdashApp.crdetail.home.createOrEditLabel">Create or edit a Crdetail</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="crdetail.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.changeId">ChangeId</label>
+                            <input type="text" class="form-control" name="changeId"
+                                   ng-model="crdetail.changeId">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.changeSummary">ChangeSummary</label>
+                            <input type="text" class="form-control" name="changeSummary"
+                                   ng-model="crdetail.changeSummary">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.chSchdFiscalWeek">ChSchdFiscalWeek</label>
+                            <input type="text" class="form-control" name="chSchdFiscalWeek"
+                                   ng-model="crdetail.chSchdFiscalWeek">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.chSchdFiscalMth">ChSchdFiscalMth</label>
+                            <input type="text" class="form-control" name="chSchdFiscalMth"
+                                   ng-model="crdetail.chSchdFiscalMth">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.ciName">CiName</label>
+                            <input type="text" class="form-control" name="ciName"
+                                   ng-model="crdetail.ciName">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.ciPriority">CiPriority</label>
+                            <input type="text" class="form-control" name="ciPriority"
+                                   ng-model="crdetail.ciPriority">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.dependentCiName">DependentCiName</label>
+                            <input type="text" class="form-control" name="dependentCiName"
+                                   ng-model="crdetail.dependentCiName">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.parentCiName">ParentCiName</label>
+                            <input type="text" class="form-control" name="parentCiName"
+                                   ng-model="crdetail.parentCiName">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.ciType">CiType</label>
+                            <input type="text" class="form-control" name="ciType"
+                                   ng-model="crdetail.ciType">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="jcrdashApp.crdetail.changeStatus">ChangeStatus</label>
+                            <input type="text" class="form-control" name="changeStatus"
+                                   ng-model="crdetail.changeStatus">
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteCrdetailConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(crdetail.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="jcrdashApp.crdetail.delete.question" translate-values="{id: '{{crdetail.id}}'}">Are you sure you want to delete this Crdetail?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="jcrdashApp.crdetail.changeId">ChangeId</th>
+                    <th translate="jcrdashApp.crdetail.changeSummary">ChangeSummary</th>
+                    <th translate="jcrdashApp.crdetail.ciName">CiName</th>
+                    <th translate="jcrdashApp.crdetail.ciPriority">CiPriority</th>
+                    <th translate="jcrdashApp.crdetail.ciType">CiType</th>
+                    <th translate="jcrdashApp.crdetail.changeStatus">ChangeStatus</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="crdetail in crdetails">
+                    <td><a ui-sref="crdetailDetail({id:crdetail.id})">{{crdetail.changeId}}</a></td>
+                    <td>{{crdetail.changeSummary}}</td>
+                    <td>{{crdetail.ciName}}</td>
+                    <td>{{crdetail.ciPriority}}</td>
+                    <td>{{crdetail.ciType}}</td>
+                    <td>{{crdetail.changeStatus}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="crdetailDetail({id:crdetail.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(crdetail.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(crdetail.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

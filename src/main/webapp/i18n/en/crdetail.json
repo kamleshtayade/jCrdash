@@ -1,0 +1,27 @@
+{
+    "jcrdashApp": {
+        "crdetail" : {
+            "home": {
+                "title": "Crdetails",
+                "createLabel": "Create a new Crdetail",
+                "createOrEditLabel": "Create or edit a Crdetail"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Crdetail {{ id }}?"
+            },
+            "detail": {
+                "title": "Crdetail"
+            },
+            "changeId": "ChangeId",
+            "changeSummary": "ChangeSummary",
+            "chSchdFiscalWeek": "ChSchdFiscalWeek",
+            "chSchdFiscalMth": "ChSchdFiscalMth",
+            "ciName": "CiName",
+            "ciPriority": "CiPriority",
+            "dependentCiName": "DependentCiName",
+            "parentCiName": "ParentCiName",
+            "ciType": "CiType",
+            "changeStatus": "ChangeStatus"
+        }
+    }
+}

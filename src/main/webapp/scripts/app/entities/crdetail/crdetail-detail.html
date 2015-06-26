@@ -1,0 +1,102 @@
+
+<div>
+    <h2><span translate="jcrdashApp.crdetail.detail.title">Crdetail</span> {{crdetail.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.changeId">ChangeId</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.changeId}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.changeSummary">ChangeSummary</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.changeSummary}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.chSchdFiscalWeek">ChSchdFiscalWeek</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.chSchdFiscalWeek}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.chSchdFiscalMth">ChSchdFiscalMth</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.chSchdFiscalMth}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.ciName">CiName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.ciName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.ciPriority">CiPriority</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.ciPriority}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.dependentCiName">DependentCiName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.dependentCiName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.parentCiName">ParentCiName</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.parentCiName}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.ciType">CiType</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.ciType}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="jcrdashApp.crdetail.changeStatus">ChangeStatus</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{crdetail.changeStatus}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="crdetail"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

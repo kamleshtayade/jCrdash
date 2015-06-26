@@ -1,0 +1,107 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "changeId",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeId",
+            "fieldNameUnderscored": "change_id",
+            "fieldInJavaBeanMethod": "ChangeId",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "changeSummary",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeSummary",
+            "fieldNameUnderscored": "change_summary",
+            "fieldInJavaBeanMethod": "ChangeSummary",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "chSchdFiscalWeek",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChSchdFiscalWeek",
+            "fieldNameUnderscored": "ch_schd_fiscal_week",
+            "fieldInJavaBeanMethod": "ChSchdFiscalWeek",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "chSchdFiscalMth",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChSchdFiscalMth",
+            "fieldNameUnderscored": "ch_schd_fiscal_mth",
+            "fieldInJavaBeanMethod": "ChSchdFiscalMth",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "ciName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CiName",
+            "fieldNameUnderscored": "ci_name",
+            "fieldInJavaBeanMethod": "CiName",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "ciPriority",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CiPriority",
+            "fieldNameUnderscored": "ci_priority",
+            "fieldInJavaBeanMethod": "CiPriority",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "dependentCiName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DependentCiName",
+            "fieldNameUnderscored": "dependent_ci_name",
+            "fieldInJavaBeanMethod": "DependentCiName",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "parentCiName",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ParentCiName",
+            "fieldNameUnderscored": "parent_ci_name",
+            "fieldInJavaBeanMethod": "ParentCiName",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "ciType",
+            "fieldType": "String",
+            "fieldNameCapitalized": "CiType",
+            "fieldNameUnderscored": "ci_type",
+            "fieldInJavaBeanMethod": "CiType",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "changeStatus",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeStatus",
+            "fieldNameUnderscored": "change_status",
+            "fieldInJavaBeanMethod": "ChangeStatus",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150626043023",
+    "dto": "no",
+    "pagination": "pagination",
+    "validation": false
+}

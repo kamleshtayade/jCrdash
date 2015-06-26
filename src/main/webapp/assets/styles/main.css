@@ -69,9 +69,17 @@ Browser Upgrade Prompt
 
 .hipster {
     display: inline-block;
-    width: 347px;
-    height: 497px;
-    background: url("../images/MgmToolIcons.png") no-repeat center top;
+    width: 1005px;
+    height: 373px;
+    background: url("../images/banner.jpg") no-repeat center top;
+    background-size: contain;
+}
+
+.brand {
+    display: initial;
+    width: 200px;
+    height: 200px;
+    background: url("../images/MgmToolIcons.png") no-repeat left top;
     background-size: contain;
 }
 
@@ -84,7 +92,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     .hipster {
-        background: url("../images/MgmToolIcons.png") no-repeat center top;
+        background: url("../images/banner.jpg") no-repeat center top;
         background-size: contain;
     }
 }
